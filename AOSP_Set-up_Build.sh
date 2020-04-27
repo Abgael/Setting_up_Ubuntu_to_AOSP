@@ -5,7 +5,7 @@ sudo apt install git-core gnupg flex bison gperf build-essential zip curl zlib1g
 #Recommended
 sudo apt install python-networkx libnss-sss:i386 gradle maven clang llvm ninja
 #Installing Make-3.81
-sudo apt-get install wget
+sudo apt install wget
 wget https://ftp.gnu.org/gnu/make/make-3.81.tar.gz
 cd Downloads
 tar -xvf make-3.81.tar.gz
@@ -14,7 +14,7 @@ cd make
 make
 sudo make install
 #Installing Heimdall Suite from Source:
-sudo apt-get install build-essential cmake zlib1g-dev qt5-default libusb-1.0-0-dev libgl1-mesa-glx libgl1-mesa-dev
+sudo apt install build-essential cmake zlib1g-dev qt5-default libusb-1.0-0-dev libgl1-mesa-glx libgl1-mesa-dev
 cd ~
 wget https://gitlab.com/BenjaminDobell/Heimdall/-/archive/master/Heimdall-master.tar.gz
 tar -xvf Heimdall-master.tar.gz
@@ -25,7 +25,7 @@ cmake -DCMAKE_BUILD_TYPE=Release ..
 make
 sudo mv ./bin/heimdall* /usr/local/bin
 #SOLVING FAILED TO LOAD MODULE “CANBERRA-GTK-MODULE”
-sudo apt-get install libcanberra-gtk-module
+sudo apt install libcanberra-gtk-module
 #Install Android Studio
 sudo dpkg --add-architecture i386
 sudo apt update
