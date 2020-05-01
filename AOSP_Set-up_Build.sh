@@ -46,5 +46,4 @@ sudo adduser `id -un` libvirtd
 sudo adduser `id -un` kvm
 virsh list --all
 sudo chown root:libvirtd /dev/kvm
-sudo apt-get install virt-manager
 sudo apt install virt-manager
