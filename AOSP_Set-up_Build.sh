@@ -24,8 +24,14 @@ cmake -DCMAKE_BUILD_TYPE=Release ..
 make
 sudo mv ./bin/heimdall* /usr/local/bin
 #SOLVING FAILED TO LOAD MODULE “CANBERRA-GTK-MODULE”
-lsb_release -c
-sudo apt install libcanberra-gtk-module
+lsb_release -c 
+if [ $"Codename:	xenial" ]
+then
+    echo "libcanberra-gtk-module not needed"
+else
+    echo "Fixing failed to load module 'canberra-gtk-module'"
+    sudo apt install libcanberra-gtk-module
+fi
 #Install Android Studio
 sudo dpkg --add-architecture i386
 sudo apt update
@@ -45,6 +51,7 @@ sudo apt install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils -y
 sudo apt install virt-viewer -y
 sudo adduser `id -un` libvirtd
 sudo adduser `id -un` kvm
-virsh list --all
+: 'virsh list --all
 sudo chown root:libvirtd /dev/kvm
 sudo apt install virt-manager
+'
