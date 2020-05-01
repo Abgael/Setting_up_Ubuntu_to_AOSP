@@ -24,6 +24,7 @@ cmake -DCMAKE_BUILD_TYPE=Release ..
 make
 sudo mv ./bin/heimdall* /usr/local/bin
 #SOLVING FAILED TO LOAD MODULE “CANBERRA-GTK-MODULE”
+lsb_release -c
 sudo apt install libcanberra-gtk-module
 #Install Android Studio
 sudo dpkg --add-architecture i386
