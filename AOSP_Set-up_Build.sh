@@ -10,7 +10,7 @@ wget https://ftp.gnu.org/gnu/make/make-3.81.tar.gz
 tar -xvf make-3.81.tar.gz
 cd make-3.81
 ./configure
-make -j4
+make -j $(nproc)
 sudo make install
 #Installing Heimdall Suite from Source:
 sudo apt install build-essential cmake zlib1g-dev qt5-default libusb-1.0-0-dev libgl1-mesa-glx libgl1-mesa-dev -y
@@ -21,7 +21,7 @@ cd Heimdall-master/
 mkdir build
 cd build
 cmake -DCMAKE_BUILD_TYPE=Release ..
-make
+make -j $(nproc)
 sudo mv ./bin/heimdall* /usr/local/bin
 #SOLVING FAILED TO LOAD MODULE “CANBERRA-GTK-MODULE”
 lsb_release -c 
