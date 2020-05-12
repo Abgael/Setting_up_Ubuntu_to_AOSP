@@ -50,8 +50,7 @@ kvm-ok
 sudo apt install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils -y
 sudo apt install virt-viewer -y
 sudo adduser `id -un` libvirtd
-sudo adduser `id -un` kvm
-: 'virsh list --all
+reboot
+virsh list --all
 sudo chown root:libvirtd /dev/kvm
-sudo apt install virt-manager
-'
+sudo apt install virt-manager -y
